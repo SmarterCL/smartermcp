@@ -1,0 +1,48 @@
+version: 1.0
+tenant: smarter-demo
+description: Reglas comerciales y de ventas
+
+rules:
+
+  - name: cierre_directo
+    description: Contacto inmediato cuando pregunta por precio
+    trigger: keyword
+    condition: text contains "precio|costo|cuanto|tarifa"
+    action:
+      type: send_message
+      message: "Te contacto con un ejecutivo ahora mismo para darte información de precios."
+      
+  - name: demo_request
+    description: Solicitud de demo
+    trigger: keyword
+    condition: text contains "demo|prueba|ver|mostrar"
+    action:
+      type: redirect
+      url: https://flow.smarterbot.cl/t/smarter-demo/agenda
+      message: "¡Perfecto! Agenda una demo aquí:"
+
+  - name: urgente
+    description: Caso urgente, notificar equipo
+    trigger: keyword
+    condition: text contains "urgente|ahora|inmediato"
+    action:
+      type: notify_team
+      channel: slack
+      message: "🚨 Lead urgente: {{user.name}} - {{user.phone}}"
+      
+  - name: follow_up_24h
+    description: Seguimiento automático a las 24h sin respuesta
+    trigger: time_elapsed
+    condition: no_response_for > 24h
+    action:
+      type: send_message
+      message: "Hola {{user.name}}, ¿sigues interesado en conocer más sobre nuestra solución?"
+
+  - name: ganado
+    description: Marcar como ganado cuando confirma compra
+    trigger: keyword
+    condition: text contains "acepto|confirmo|adelante|si"
+    action:
+      type: update_crm
+      stage: won
+      notify: true

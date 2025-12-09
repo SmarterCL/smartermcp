@@ -1,0 +1,47 @@
+version: 1.0
+tenant: smarter-demo
+description: Reglas base de conversación automática
+
+rules:
+
+  - name: welcome
+    description: Mensaje de bienvenida al primer contacto
+    trigger: inbound_message
+    condition: first_contact == true
+    action:
+      type: send_message
+      message: "Hola, soy el asistente automático. ¿En qué te puedo ayudar?"
+      
+  - name: qualify
+    description: Calificación automática del lead
+    trigger: inbound_message
+    condition: stage == welcome
+    action:
+      type: set_stage
+      stage: qualified
+      
+  - name: agenda
+    description: Redirección a agenda cuando está calificado
+    trigger: stage_change
+    condition: stage == qualified
+    action:
+      type: redirect
+      url: https://flow.smarterbot.cl/t/smarter-demo/agenda
+
+  - name: horario_fuera
+    description: Mensaje automático fuera de horario
+    trigger: inbound_message
+    condition: business_hours == false
+    action:
+      type: send_message
+      message: "Gracias por contactarnos. Nuestro horario es Lun-Vie 09:00-18:00. Te responderemos pronto."
+
+  - name: otp_request
+    description: Solicitud de código OTP
+    trigger: keyword
+    condition: text contains "codigo|clave|acceso"
+    action:
+      type: trigger_workflow
+      workflow: otp-generate
+      params:
+        phone: "{{user.phone}}"
