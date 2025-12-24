@@ -1,0 +1,6 @@
+{
+  "api_token": "lgZhXjlhtKK82l1rZCwejAj0dEd1nIb8kH314fUj6a01d96a",
+  "endpoint": "https://api.hostinger.com",
+  "timeout": 30000,
+  "retry_attempts": 3
+}

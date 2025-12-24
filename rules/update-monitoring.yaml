@@ -1,0 +1,38 @@
+version: 1.0
+name: update-monitoring
+description: Rules for monitoring service updates
+
+rules:
+  - name: check_service_updates
+    description: Periodically check for service updates
+    trigger: cron
+    condition: "schedule == '0 9 * * *'" # Daily at 9 AM
+    action:
+      type: execute_scout
+      scout: update-checker
+      params:
+        notify_on_updates: true
+        services:
+          - n8n
+          - other_services_to_monitor
+
+  - name: notify_update_available
+    description: Send notification when updates are available
+    trigger: update_check_result
+    condition: result.updatesAvailable > 0
+    action:
+      type: send_notification
+      message: "🚨 Updates available for {{result.summary.updatesAvailable}} services: {{result.summary.updateServices}}"
+      recipients:
+        - admin@smarterbot.cl
+
+  - name: auto_update_n8n
+    description: Automatically update n8n if configured
+    trigger: update_available
+    condition: service == 'n8n' and autoUpdateEnabled == true
+    action:
+      type: trigger_workflow
+      workflow: update-n8n
+      params:
+        version: "{{latestVersion}}"
+        backup: true

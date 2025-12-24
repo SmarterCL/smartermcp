@@ -1,0 +1,15 @@
+# Configuración específica para Hostinger MCP Provider
+# Este archivo asegura que SmarterMCP use la clave correcta
+
+{
+  "mcpServers": {
+    "hostinger-api": {
+      "command": "hostinger-api-mcp",
+      "env": {
+        "API_TOKEN": "lgZhXjlhtKK82l1rZCwejAj0dEd1nIb8kH314fUj6a01d96a",
+        "ENDPOINT": "https://api.hostinger.com",
+        "DEBUG": "false"
+      }
+    }
+  }
+}

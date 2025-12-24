@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  smartermcp:
+    build: .
+    container_name: smartermcp
+    ports:
+      - "3100:3100"
+    environment:
+      - NODE_ENV=production
+      - MCP_PORT=3100
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+    volumes:
+      - ./config:/app/config
+      - ./scouts:/app/scouts
+      - ./rules:/app/rules
+    restart: unless-stopped
+    networks:
+      - smarteros
+
+networks:
+  smarteros:
+    external: true
