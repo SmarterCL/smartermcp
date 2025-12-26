@@ -6,6 +6,11 @@
 [![n8n](https://img.shields.io/badge/n8n-compatible-green.svg)](https://n8n.io)
 [![MCP](https://img.shields.io/badge/MCP-1.0-orange.svg)](https://modelcontextprotocol.io)
 
+## 🏆 Stats
+[![GitHub stars](https://img.shields.io/github/stars/SmarterCL/smartermcp?style=social)](https://github.com/SmarterCL/smartermcp)
+[![GitHub forks](https://img.shields.io/github/forks/SmarterCL/smartermcp?style=social)](https://github.com/SmarterCL/smartermcp)
+[![GitHub watchers](https://img.shields.io/github/watchers/SmarterCL/smartermcp?style=social)](https://github.com/SmarterCL/smartermcp)
+
 ## 🎯 What is SmarterMCP?
 
 SmarterMCP is an **operational active monitor with conditioned power**. It is NOT an "AGI libre" but rather a **controlled AI agent** that:
@@ -46,7 +51,7 @@ This is **control, not limitation**.
 AGI in your model is not consciousness - it's **General Capability Under Contract**.
 
 - 🌐 **Understands any language**
-- 🧠 **Reasons across any domain**
+- 🧠 **Reasons across any domain** 
 - 🔧 **Can create containers, test, discard**
 - ✅ **But only launches what's approved in PRD**
 
@@ -246,4 +251,14 @@ Proprietary. See [LICENSE](LICENSE) for details.
 
 ---
 
+## SmarterOS API - Enterprise API with MCP Integration
+
+La API central de SmarterOS: Plataforma gobernada con FastAPI-MCP, Qwen LLM y OpenRouter para empresas chilenas.
+
+[https://github.com/SmarterCL/api.smarterbot.cl](https://github.com/SmarterCL/api.smarterbot.cl)
+
+---
+
 Made with ❤️ by [SmarterOS](https://smarterbot.store)
+
+[Website](https://smarterbot.store) • [GitHub](https://github.com/SmarterCL) • [Docs](https://smarterbot.store/docs)
