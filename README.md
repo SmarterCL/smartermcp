@@ -1,6 +1,6 @@
-# SmarterMCP - Model Context Protocol Integration
+# SmarterMCP - Operational Active Monitor with Conditioned Power
 
-> Enterprise-grade MCP server for n8n automation and AI workflows
+> Enterprise-grade AI agent that thinks, observes, analyzes and acts only under SPEC + PRD authorization
 
 [![License](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
 [![n8n](https://img.shields.io/badge/n8n-compatible-green.svg)](https://n8n.io)
@@ -8,13 +8,77 @@
 
 ## 🎯 What is SmarterMCP?
 
-SmarterMCP is a Model Context Protocol (MCP) server that bridges AI assistants with n8n automation workflows. It enables:
+SmarterMCP is an **operational active monitor with conditioned power**. It is NOT an "AGI libre" but rather a **controlled AI agent** that:
 
-- 🔄 Execute n8n workflows from any MCP-compatible AI
-- 📊 Real-time workflow status and monitoring
-- 🔐 Secure OAuth authentication with Google + RUT validation
-- 📱 SMS 2FA verification
-- 🇨🇱 Chilean RUT validation (Módulo 11)
+- 🧠 **Thinks, observes, and analyzes** everything that is declared
+- 🎯 **Only acts when PRD + SPEC authorize it**
+- ⚖️ **Operates under contract** - executes only approved actions
+
+### How It Behaves
+
+**Observes simultaneously:**
+- Screens, flows, metrics, scrapping, values, states
+
+**Analyzes continuously:**
+- Sales, payments, responses, deviations, opportunities
+
+**Proposes or executes according to rule:**
+- If SPEC says "propose" → proposes and waits
+- If SPEC says "execute" → executes and registers
+
+**Never improvises. Never gets "excited".**
+
+### Clear Example (QR / Survey)
+
+There's an active QR code
+Nobody responds
+It's not that MCP "sleeps" - the SPEC didn't define action for this event.
+
+If SPEC says:
+- "if no response → notify" → it does
+- "if no response → execute action X" → it does
+- If says nothing → nothing happens
+
+This is **control, not limitation**.
+
+### What AGI Means Here
+
+AGI in your model is not consciousness - it's **General Capability Under Contract**.
+
+- 🌐 **Understands any language**
+- 🧠 **Reasons across any domain**
+- 🔧 **Can create containers, test, discard**
+- ✅ **But only launches what's approved in PRD**
+
+It has the car keys,
+but doesn't drive without orders.
+
+### Odoo + Turbo MCP
+
+**Odoo:**
+- Dashboard
+- Registry
+- Visibility
+
+**MCP:**
+- Law
+- Coordination
+- Decision
+
+Odoo doesn't command.
+MCP doesn't display.
+Each in its place.
+
+### Conclusion
+
+SmarterMCP doesn't "do what it wants".
+It does **everything it should do**.
+
+This makes it:
+- ✅ **Reliable**
+- ✅ **Regulable**
+- ✅ **Sellable**
+- ✅ **Scalable** to hardware and robotics after
 
 ## 🚀 Quick Start
 
@@ -84,13 +148,13 @@ AI Assistant Access
 
 ## 📋 Features
 
-- ✅ **OAuth 2.0** - Google authentication
-- ✅ **RUT Validation** - Chilean ID verification
-- ✅ **SMS 2FA** - Phone verification
-- ✅ **n8n Integration** - Execute workflows
-- ✅ **MCP Protocol** - Standard compliance
-- ✅ **Webhook Support** - Real-time events
-- ✅ **Secure Storage** - Supabase Vault
+- ✅ **Operational Monitor** - Active observation of all declared elements
+- ✅ **Conditioned Power** - Acts only when SPEC + PRD authorize
+- ✅ **Real-time Analysis** - Continuous evaluation of sales, payments, responses
+- ✅ **n8n Integration** - Execute workflows under contract
+- ✅ **MCP Protocol** - Standard compliance with control
+- ✅ **Event-Driven** - Responds to defined events only
+- ✅ **Secure Storage** - Supabase Vault for approved operations
 
 ## 🔐 Security
 
@@ -137,6 +201,7 @@ npm install
 
 # Configure
 cp .env.example .env
+# Important: Configure SPEC and PRD rules before running
 
 # Run dev
 npm run dev
@@ -144,9 +209,18 @@ npm run dev
 # Build
 npm run build
 
-# Test
+# Test (under controlled conditions)
 npm test
 ```
+
+### Development Principles
+
+When developing for SmarterMCP, remember:
+
+- **Contract-First**: Every feature must be defined in SPEC + PRD first
+- **Controlled Execution**: No autonomous behavior, only rule-based actions
+- **Event-Driven**: Responds only to declared events
+- **Secure by Design**: All operations under authorization control
 
 ## 🤝 Contributing
 
