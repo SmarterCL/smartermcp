@@ -1,6 +1,9 @@
-🏭 SmarterMCP opera sobre un dominio operativo
+❗ SmarterMCP requiere un dominio operativo activo ❗
 
-SmarterMCP funciona únicamente sobre un dominio operativo activo, que actúa como:
+SmarterMCP funciona solo sobre un negocio en operación real.
+No se instala “en vacío”.
+
+Ajusta y gobierna:
 
 motor de ventas
 
@@ -8,50 +11,41 @@ motor contable
 
 motor de pagos
 
-punto único de ejecución y control
-
-No es un “backend más”.
+No es un backend genérico.
 No es un login.
-No es un SaaS genérico.
+No es un SaaS horizontal.
 
-Es la capa que gobierna el negocio en producción.
+Es la capa de control diario del negocio, comercial y contable.
 
-Qué significa “dominio operativo”
+Dominio operativo válido
 
-Un dominio operativo es un dominio web que:
+empresa.cl
 
-está conectado a un ERP real (Odoo)
+tienda.empresa.cl
 
-procesa ventas reales
+subdominio.empresa.cl
 
-registra contabilidad real
-
-ejecuta pagos reales
-
-expone APIs operativas (no demo, no sandbox)
-
-Sin operación real, SmarterMCP no se activa.
-
-Ejemplos válidos de dominio operativo
-
-empresa.cl ; tienda.empresa.cl ; subdominio.empresa.cl
-
-Ejemplos no válidos: demos ; sandboxes ; proyectos sin ERP ; dominios sin flujo comercial activo
+Debe existir venta, ejecución y cobro.
 
 Principio clave
 
 SmarterMCP es un plano de control acoplado a ERP.
 No es una herramienta generalista.
 
-Opera exclusivamente cuando existe un stack empresarial activo
-(Odoo + ejecución + pagos).
-- ejecuta pagos reales
-- expone APIs operativas (no demo)
+Opera únicamente cuando el stack empresarial está activo:
 
-### Cliente Ideal :
+ejecuta pagos reales
 
-- empresa.cl
-- tienda.empresa.cl
+expone APIs operativas, no demos
 
+Cliente ideal
+
+empresa.cl
+
+tienda.empresa.cl
+
+Negocios funcionando, no proyectos conceptuales.
+
+SmarterMCP gobierna. No simula.
 SmarterMCP es un plano de control acoplado a ERP.
 No es una herramienta general. Opera solo con stack empresarial activo.
