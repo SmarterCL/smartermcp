@@ -194,6 +194,148 @@ See [SECURITY.md](SECURITY.md) for details.
 - Google OAuth credentials
 - Supabase account
 
+## 📦 Deployment & Commercial Model
+
+SmarterMCP is a control plane.
+It governs how agents, services, and actions are authorized and executed.
+
+It can be deployed on VPS, cloud, or hybrid environments.
+The deployment model does not change the contract, rules, or behavior of the system.
+
+When reading this project, you might wonder:
+
+"Do I install this myself?"
+"Is this a SaaS?"
+"Is it a dev tool or a managed service?"
+
+The answer is simple:
+
+SmarterMCP supports three usage models.
+
+Mode A — Self-hosted (Your own VPS)
+
+Designed for technical companies and integrators.
+
+Runs on your own VPS or infrastructure
+
+Connects to your own Odoo v19 instance
+
+You govern your own agents, rules, and execution
+
+Full control over data, logic, and operations
+
+Value: maximum control
+Typical users: enterprises, system integrators, technical teams
+
+Mode B — Managed (Smarter Cloud)
+
+Designed for non-technical businesses.
+
+Smarter provides and operates the MCP
+
+Rules, runtime, and updates are managed by us
+
+The client connects Odoo / ERP / APIs
+
+Includes SLA, support, and subscription billing
+
+Value: operate without technical complexity
+Typical users: businesses, operations teams, decision-makers
+
+Mode C — Hybrid (Federated Control Plane)
+
+Designed for scalable, multi-entity operations (2026-ready).
+
+Central MCP operated by Smarter
+
+Distributed services (client VPS, Odoo, n8n, external APIs)
+
+Shared rules and governance
+
+Federated execution across environments
+
+Value: scalable, sellable, replicable
+Typical users: platforms, multi-brand companies, advanced deployments
+
+📌 Key Principle
+
+Odoo, n8n, and external systems are service providers.
+They do not command the system.
+
+SmarterMCP defines the rules.
+Execution happens only under SPEC and PRD authorization.
+
+## 📦 Modelo de Despliegue y Comercial
+
+SmarterMCP es un plano de control.
+Gobierna cómo los agentes, servicios y acciones son autorizados y ejecutados.
+
+Puede desplegarse en VPS, cloud o entornos híbridos.
+El modelo de despliegue no cambia el contrato, las reglas ni el comportamiento del sistema.
+
+Al leer este proyecto, es normal preguntarse:
+
+"¿Esto lo instalo yo?"
+"¿Es un SaaS?"
+"¿Es una herramienta de desarrollo o un servicio gestionado?"
+
+La respuesta es simple:
+
+SmarterMCP tiene tres modos de uso.
+
+Modo A — Autohospedado (VPS propio)
+
+Pensado para empresas técnicas e integradores.
+
+Corre en tu propio VPS o infraestructura
+
+Se conecta a tu instancia de Odoo v19
+
+Tú gobiernas tus agentes, reglas y ejecución
+
+Control total de datos y operaciones
+
+Valor: control total
+Uso típico: empresas, integradores, equipos técnicos
+
+Modo B — Gestionado (Cloud Smarter)
+
+Pensado para empresas no técnicas.
+
+Smarter provee y opera el MCP
+
+Reglas, runtime y actualizaciones gestionadas
+
+El cliente conecta Odoo / ERP / APIs
+
+Incluye SLA, soporte y pago mensual
+
+Valor: operar sin complejidad técnica
+Uso típico: negocio, operaciones, dirección
+
+Modo C — Híbrido (Plano de control federado)
+
+Pensado para operaciones escalables y multi-entidad.
+
+MCP central operado por Smarter
+
+Servicios distribuidos (VPS del cliente, Odoo, n8n, APIs externas)
+
+Reglas comunes
+
+Ejecución federada entre entornos
+
+Valor: escalable, vendible, replicable
+Uso típico: plataformas, grupos empresariales, despliegues avanzados
+
+Principio clave
+
+Odoo, n8n y los sistemas externos no mandan.
+Son proveedores de servicio.
+
+SmarterMCP define las reglas.
+La ejecución solo ocurre bajo autorización SPEC + PRD.
+
 ## 🛠️ Development
 
 ```bash
