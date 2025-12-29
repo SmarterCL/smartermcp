@@ -85,15 +85,47 @@ This makes it:
 - ✅ **Sellable**
 - ✅ **Scalable** to hardware and robotics after
 
-## 🚀 Quick Start
+## 🚀 Inicio Rápido
 
-### For End Users
+### Para Usuarios
 
-1. **Login**: Visit [rut.smarterbot.store/login](https://rut.smarterbot.store/login)
-2. **Authenticate**: Sign in with Google OAuth
-3. **Verify Identity**: Enter Chilean RUT and phone number
-4. **SMS Verification**: Enter 6-digit code
-5. **Start Using**: Access your n8n workflows via MCP
+1. **Inicio de Sesión**: Visita [rut.smarterbot.store/login](https://rut.smarterbot.store/login)
+2. **Autenticación**: Inicia sesión con Google OAuth
+3. **Verificación de Identidad**: Ingresa RUT chileno y número de teléfono
+4. **Verificación SMS**: Ingresa código de 6 dígitos
+5. **Comenzar a Usar**: Accede a tus workflows de n8n vía MCP
+
+## 🏭 SmarterMCP funciona sobre un dominio operativo
+que actúa como:
+
+- motor de ventas
+- motor contable
+- motor de pagos
+- punto único de ejecución y control
+
+no es un "backend más".
+no es un login.
+no es un SaaS genérico.
+
+es la capa que gobierna el negocio en producción.
+
+### Qué significa "dominio operativo" (para que no haya dudas)
+
+Un dominio operativo es un dominio web que:
+
+- está conectado a un ERP real (Odoo)
+- procesa ventas reales
+- registra contabilidad real
+- ejecuta pagos reales
+- expone APIs operativas (no demo)
+
+### Ejemplos válidos:
+
+- empresa.cl
+- tienda.empresa.cl
+
+SmarterMCP es un plano de control acoplado a ERP.
+No es una herramienta general. Opera solo con stack empresarial activo.
 
 ### For Developers
 
